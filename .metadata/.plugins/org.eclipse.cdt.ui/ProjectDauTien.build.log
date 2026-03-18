@@ -1,20 +1,10 @@
-09:56:20 **** Incremental Build of configuration Debug for project ProjectDauTien ****
+10:16:05 **** Incremental Build of configuration Debug for project ProjectDauTien ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"D:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-arm-none-eabi-gcc -o "ProjectDauTien.elf" @"objects.list"  -lLibraries -mcpu=cortex-m4 -T"C:\Users\ThinkPad\STM32CubeIDE\workspace_1.6.0\ProjectDauTien\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ProjectDauTien.map" -Wl,--gc-sections -static -Wl,--start-group -lLibraries -Wl,--end-group -L"D:\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ProjectDauTien.elf
- 
-arm-none-eabi-objdump -h -S  ProjectDauTien.elf  > "ProjectDauTien.list"
-arm-none-eabi-objcopy  -O binary  ProjectDauTien.elf  "ProjectDauTien.bin"
 arm-none-eabi-size   ProjectDauTien.elf 
    text	   data	    bss	    dec	    hex	filename
   15772	     32	   6336	  22140	   567c	ProjectDauTien.elf
 Finished building: default.size.stdout
  
-Finished building: ProjectDauTien.bin
- 
-Finished building: ProjectDauTien.list
- 
 
-09:56:20 Build Finished. 0 errors, 0 warnings. (took 698ms)
+10:16:06 Build Finished. 0 errors, 0 warnings. (took 170ms)
 
