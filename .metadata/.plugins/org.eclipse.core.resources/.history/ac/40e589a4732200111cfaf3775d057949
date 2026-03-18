@@ -1,0 +1,27 @@
+#include <system_stm32f4xx.h>
+#include <timer.h>
+#include <Ucglib.h>
+#include <stdint.h>
+
+static ucg_t ucg;
+
+int main()
+{
+	SystemClockUpdate();
+	TimerInit();
+
+	Ucglib4WireSWSPI(&ucg, UCG_FONT_MODE_SOLID);
+	ucg_ClearScreen(&ucg);
+
+	ucgSetFont(&ucg, ucg_font_helvR08_tf);
+	ucgSetColor(&ucg, 0, 255, 255, 255);
+	ucgSetColor(&ucg, 1, 0, 0, 0);
+	ucg_SetRotate180(&ucg);
+	ucg_DrawString(&ucg, 0, 12, 0, "I Love Embedded");
+	ucg_DrawString(&ucg, 0, 12, 0, "Programming");
+
+	while (1)
+	{
+		processTimerScheduler();
+	}
+}

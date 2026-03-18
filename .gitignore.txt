@@ -1,0 +1,8 @@
+Debug/
+.metadata/
+*.o
+*.elf
+*.bin
+*.map
+*.hex
+
